@@ -3,153 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>整合型履歷優化平台 | Pitch Deck</title>
+    <title>OmniResume | 智能履歷整合平台</title>
     <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --bg-color: #f8fafc;
+            --text-main: #1e293b;
+            --text-light: #64748b;
+        }
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            max-width: 900px;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            max-width: 1000px;
             margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            margin-left: 20px;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+        nav a:hover {
+            color: var(--primary-color);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 80px auto 0;
             padding: 20px;
-            background-color: #f9f9f9;
         }
         section {
-            background-color: #fff;
-            padding: 40px;
-            margin-bottom: 30px;
-            border-radius: 8px;
+            background: white;
+            border-radius: 12px;
+            padding: 50px;
+            margin-bottom: 40px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        section:hover {
+            transform: translateY(-5px);
         }
         h1 {
-            color: #2c3e50;
-            font-size: 2.5em;
-            text-align: center;
+            font-size: 3em;
+            color: var(--primary-color);
             margin-bottom: 10px;
         }
         h2 {
-            color: #3498db;
-            border-bottom: 2px solid #ecf0f1;
+            font-size: 2em;
+            color: var(--text-main);
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
             padding-bottom: 10px;
-            margin-top: 0;
+            margin-bottom: 30px;
         }
-        .tagline {
+        h3 {
+            color: var(--secondary-color);
+        }
+        .hero {
             text-align: center;
-            font-size: 1.2em;
-            color: #7f8c8d;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-radius: 12px;
             margin-bottom: 40px;
+        }
+        .hero p {
+            font-size: 1.5em;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .card {
+            background: var(--bg-color);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
         }
         ul {
             padding-left: 20px;
         }
         li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
-        .highlight {
+        .metric {
+            font-size: 2em;
             font-weight: bold;
-            color: #e74c3c;
+            color: var(--primary-color);
+            display: block;
+        }
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-light);
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. Cover -->
-    <section id="cover">
-        <h1>OmniResume (暫定名稱)</h1>
-        <p class="tagline">一站式個人經歷整合與智能履歷優化平台</p>
-    </section>
+    <header>
+        <nav>
+            <div style="font-size: 1.5em; font-weight: bold; color: var(--primary-color);">OmniResume</div>
+            <div>
+                <a href="#problem">Problem & Solution</a>
+                <a href="#market">Market & Model</a>
+                <a href="#team">Team & Funding</a>
+            </div>
+        </nav>
+    </header>
 
-    <!-- 2. Problem -->
-    <section id="problem">
-        <h2>Problem Statement (痛點分析)</h2>
-        <p>準備履歷是入職前非常重要的一環，但求職者往往面臨資料過度分散的問題[cite: 1]：</p>
-        <ul>
-            <li><strong>外部平台：</strong> LinkedIn, GitHub, 各大求職網站[cite: 1]。</li>
-            <li><strong>個人儲存：</strong> 雲端硬碟、個人電腦檔案[cite: 1]。</li>
-            <li><strong>校園系統（新鮮人痛點）：</strong> 記錄分散在清大 EECLASS / eLearn、政大 Moodle 等不同校務系統[cite: 1]。</li>
-        </ul>
-        <p>這導致求職者難以整合雜亂資料並根據特定職缺提取重點，資方也無法完整了解求職者的真實價值[cite: 1]。</p>
-    </section>
+    <div class="container">
+        <!-- 1. Cover -->
+        <section class="hero" id="cover">
+            <h1>OmniResume</h1>
+            <p>一站式個人經歷整合與智能履歷優化平台。我們將求職者的零散足跡，轉化為最具競爭力的職場武器。</p>
+            <small style="display:block; margin-top:20px; color:#94a3b8;">Pitch Deck 提案簡報[cite: 1]</small>
+        </section>
 
-    <!-- 3. Solution -->
-    <section id="solution">
-        <h2>Solution (解決方案)</h2>
-        <p>我們創造一個跨平台的整合系統，解決上述痛點[cite: 1]：</p>
-        <ul>
-            <li><strong>一鍵整合：</strong> 串接校務系統、開源社群與求職平台，自動爬梳並匯集散落的個人經歷[cite: 1]。</li>
-            <li><strong>智能提取：</strong> 運用 AI 技術提取關鍵成就，根據求職者的「職涯目標」和「個人能力」自動優化履歷呈現[cite: 1]。</li>
-            <li><strong>雙向賦能：</strong> 求職者能輕鬆統整經歷，資方能透過結構化的數據更全面地評估候選人價值[cite: 1]。</li>
-        </ul>
-    </section>
+        <!-- 2. Problem & 3. Solution -->
+        <section id="problem">
+            <div class="grid-2">
+                <div>
+                    <h2>Problem 痛點分析</h2>
+                    <p>我們解決了目前市場上求職者與企業端面臨的核心問題[cite: 1, 2]：</p>
+                    <div class="card">
+                        <h3>資料過度碎片化</h3>
+                        <p>求職者的個人資料散佈在 LinkedIn、GitHub、各式求職網站以及個人電腦中[cite: 1]。學生族群的記錄更被封閉在校務系統（如 Moodle、eLearn）內，難以提取。</p>
+                    </div>
+                    <div class="card" style="margin-top: 15px;">
+                        <h3>履歷客製化成本過高</h3>
+                        <p>求職者難以針對不同職缺，快速從龐雜的資料中萃取重點；導致資方無法精準評估候選人真實價值，目標客戶對現有解決方案感到挫折[cite: 1, 2]。</p>
+                    </div>
+                </div>
+                <div>
+                    <h2>Solution 解決方案</h2>
+                    <p>OmniResume 是一個雙向賦能的整合系統，我們的產品運作方式如下[cite: 1, 2]：</p>
+                    <ul>
+                        <li><strong>一鍵跨平台聚合：</strong> 透過 API 與爬蟲技術，安全串接校務系統與外部專業平台，自動匯集使用者的數位經歷[cite: 2]。</li>
+                        <li><strong>AI 智能萃取與優化：</strong> 導入自然語言處理技術，根據求職者的職涯目標與職缺需求，自動重組並優化履歷的重點呈現，帶來極大效益[cite: 2]。</li>
+                        <li><strong>企業端結構化分析：</strong> 為資方提供標準化、數據化的候選人價值報告，解決未滿足的招募需求[cite: 2]。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <!-- 4. Traction -->
-    <section id="traction">
-        <h2>Traction (市場牽引力)</h2>
-        <p><em>(目前為規劃階段，未來將展示：)</em></p>
-        <ul>
-            <li>Beta 版測試註冊人數 (如：來自清大等指標性大學的早期用戶)。</li>
-            <li>獲客成本 (CAC) 與用戶終身價值 (LTV)[cite: 2]。</li>
-            <li>預期成長策略與用戶留存率 (Retention Rate)[cite: 2]。</li>
-        </ul>
-    </section>
+        <!-- 4. Traction & 6. Market Opportunity -->
+        <section id="market">
+            <div class="grid-2">
+                <div>
+                    <h2>Traction 牽引力</h2>
+                    <p>證明客戶對產品的需求以及我們的成長策略[cite: 1, 2]：</p>
+                    <ul>
+                        <li><strong>用戶獲取 (CAC & LTV)：</strong> 透過校園大使與職涯工作坊進行早期低成本獲客，優化獲客成本與終身價值比例[cite: 2]。</li>
+                        <li><strong>核心指標：</strong> 追蹤獨立新活躍用戶數、用戶留存率 (Retention Rate) 以及淨推薦值 (NPS)[cite: 2]。</li>
+                        <li><strong>增長策略：</strong> 預計透過校園 B2B2C 授權，達成首年指數型成長[cite: 2]。</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Market 市場機會</h2>
+                    <p>這是一個具備高度規模化潛力的市場[cite: 1]：</p>
+                    <div class="card">
+                        <span class="metric">$XX Billion</span>
+                        <p><strong>TAM (總可用市場)：</strong> 全球 HR Tech 與智能招募科技市場規模，採用由上而下的市場分析法[cite: 2]。</p>
+                    </div>
+                    <div class="card" style="margin-top: 15px;">
+                        <span class="metric">$XX Million</span>
+                        <p><strong>SAM (可服務市場)：</strong> 亞太地區高等教育畢業生與初階專業人才市場[cite: 2]。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- 5. Business Model -->
-    <section id="business-model">
-        <h2>Business Model (商業模式)</h2>
-        <ul>
-            <li><strong>B2C (求職者)：</strong> 基礎整合功能免費，進階 AI 履歷客製化與職缺媒合收取訂閱費[cite: 2]。</li>
-            <li><strong>B2B (企業端)：</strong> 提供企業精準的人才搜尋引擎與結構化候選人分析報告，收取平台年費或媒合費[cite: 2]。</li>
-        </ul>
-    </section>
+        <!-- 5. Business Model & 7. Financials -->
+        <section id="business">
+            <h2>Business & Financials 商業與財務模型</h2>
+            <div class="grid-2">
+                <div>
+                    <h3>獲利模式 (Business Model)</h3>
+                    <p>我們的單位經濟效益與利潤結構如下[cite: 1, 2]：</p>
+                    <ul>
+                        <li><strong>B2C 免費增值：</strong> 基礎整合免費，進階 AI 客製化履歷與面試模擬收取月費訂閱[cite: 2]。</li>
+                        <li><strong>B2B 企業方案：</strong> 提供招募端人才庫搜尋與數據分析，收取平台年費及成功媒合費[cite: 2]。</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>財務預測 (Financial Projections)</h3>
+                    <p>基於上述定價模型，我們對未來 3-5 年的財務預估[cite: 1, 2]：</p>
+                    <ul>
+                        <li>預期首年完成產品開發並達成 10,000 名活躍用戶。</li>
+                        <li>第三年實現現金流轉正，並將利潤持續投入系統擴展以達永續成長[cite: 2]。</li>
+                        <li><em>(詳細財務預測數據與單位成本結構可於盡職調查階段提供)</em>[cite: 2]。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <!-- 6. Market Opportunity -->
-    <section id="market">
-        <h2>Market Opportunity (市場機會)</h2>
-        <ul>
-            <li><strong>TAM (總可用市場)：</strong> 全球 HR Tech 與招募科技市場[cite: 2]。</li>
-            <li><strong>SAM (可服務市場)：</strong> 亞太區的高等教育畢業生與初階/中階專業人才[cite: 2]。</li>
-        </ul>
-    </section>
+        <!-- 8. Team & 9. Competition -->
+        <section id="team">
+            <div class="grid-2">
+                <div>
+                    <h2>Core Team 核心團隊</h2>
+                    <p>我們擁有將這個機會轉化為大型企業的專業知識[cite: 1, 2]：</p>
+                    <ul>
+                        <li><strong>執行長 (CEO)：</strong> 具備人工智慧、數據分析與企業數位轉型 (AI Transformation) 的實務背景，負責產品總體架構與商業策略[cite: 2]。</li>
+                        <li><strong>技術長 (CTO)：</strong> 專精於機器學習與後端架構，確保爬蟲系統的穩定性與 AI 模型的準確度[cite: 2]。</li>
+                        <li><em>團隊成員曾在業界頂尖科技與金融機構擔任研發實習，具備堅實的技術與解決問題能力。</em>[cite: 2]</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Competition 競爭分析</h2>
+                    <p>為何我們是更好的選擇[cite: 1, 2]：</p>
+                    <div class="card">
+                        <p><strong>現有替代方案：</strong> LinkedIn, CakeResume 及傳統人力銀行[cite: 2]。</p>
+                        <p><strong>競爭優勢：</strong> 傳統平台高度依賴「手動輸入」，難以涵蓋校園封閉系統。OmniResume 是唯一主打「自動化整合」結合「生成式 AI 重組」的平台，大幅降低履歷維護成本[cite: 2]。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- 7. Financials -->
-    <section id="financials">
-        <h2>Financials (財務預測)</h2>
-        <p>預計未來 3-5 年的營收成長預估（包含訂閱制收入與企業端媒合抽成）[cite: 2]。<em>(詳細數據模型建構中)</em></p>
-    </section>
+        <!-- 10. Funding Status & 11. Summary -->
+        <section id="funding" style="background-color: #1e293b; color: white;">
+            <div class="grid-2">
+                <div>
+                    <h2 style="color: white; border-bottom-color: #3b82f6;">Funding 募資計畫</h2>
+                    <ul>
+                        <li><strong>目前階段：</strong> Pre-seed (概念驗證與 MVP 開發)[cite: 1, 2]。</li>
+                        <li><strong>資金需求：</strong> 尋求 $XXX,XXX 資金，預計提供 18 個月的 Runway[cite: 2]。</li>
+                        <li><strong>資金用途：</strong> 投入資料引擎開發、串接各大校務系統 API，以及進行早期市場推廣[cite: 2]。</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 style="color: white; border-bottom-color: #3b82f6;">Summary 總結與聯絡</h2>
+                    <p>重塑履歷的未來，讓每個人的真實價值都能被看見[cite: 1]。</p>
+                    <br>
+                    <p><strong>歡迎與我們聯繫：</strong>[cite: 2]</p>
+                    <p>✉️ Email: founder@omniresume.tech (範例)</p>
+                    <p>🌐 Website: omniresume.tech (範例)</p>
+                </div>
+            </div>
+        </section>
+    </div>
 
-    <!-- 8. Team -->
-    <section id="team">
-        <h2>Team (核心團隊)</h2>
-        <ul>
-            <li><strong>Founder：</strong> 國立清華大學 (NTHU) 學生，具備 AI 與數據分析實務經驗。曾任 MoBagel AI Transformation Office 實習生及 APMIC RD Intern，擁有從數據處理到系統優化的技術背景，能主導履歷資料整合與 AI 模型應用的開發。</li>
-        </ul>
-    </section>
-
-    <!-- 9. Competition -->
-    <section id="competition">
-        <h2>Competition (競爭分析)</h2>
-        <ul>
-            <li><strong>現有替代方案：</strong> LinkedIn, CakeResume, 各大傳統人力銀行[cite: 2]。</li>
-            <li><strong>我們的競爭優勢：</strong> 現有平台要求「手動填寫」，我們主打「自動聚合」與「針對特定職缺的 AI 重組」，特別針對學生的校務系統（如 EECLASS）做到無縫整合，這是傳統平台無法做到的深水區。</li>
-        </ul>
-    </section>
-
-    <!-- 10. Funding -->
-    <section id="funding">
-        <h2>Funding Status (募資狀態)</h2>
-        <ul>
-            <li><strong>目前階段：</strong> Pre-seed (概念驗證與 MVP 開發階段)[cite: 2]。</li>
-            <li><strong>資金用途：</strong> 開發資料爬蟲引擎、整合各大校務系統 API，以及建置 AI 履歷優化模型[cite: 2]。</li>
-        </ul>
-    </section>
-
-    <!-- 11. Summary -->
-    <section id="summary">
-        <h2>Summary & Contact (總結與聯絡方式)</h2>
-        <p>我們將零散的個人足跡，轉化為最強大的求職武器。歡迎投資人與合作夥伴與我們聯繫！</p>
-        <p><strong>Email:</strong> (請填入你的信箱)</p>
-        <p><strong>Website:</strong> https://dairyan930128gapp.github.io</p>
-    </section>
+    <footer>
+        <p>© 2026 OmniResume. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
