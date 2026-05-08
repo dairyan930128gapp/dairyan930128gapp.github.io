@@ -119,23 +119,6 @@
             font-weight: 300;
         }
 
-        .cta-btn {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            transition: background 0.3s, transform 0.2s;
-        }
-
-        .cta-btn:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-        }
-
         /* Grid and Card Design */
         .grid-2 {
             display: grid;
@@ -194,6 +177,21 @@
             font-weight: bold;
         }
 
+        /* Metrics and Labels */
+        .metric {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
         /* Footer */
         footer {
             background: #0f172a;
@@ -218,124 +216,140 @@
         <nav>
             <a href="#" class="logo">OmniResume.</a>
             <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#about">About Us</a>
+                <a href="#problem">Problem & Solution</a>
+                <a href="#business">Business & Market</a>
+                <a href="#team">Team & Funding</a>
             </div>
         </nav>
     </header>
 
     <div class="hero" id="cover">
         <h1>Redefine Your Career Identity</h1>
-        <p>OmniResume is your ultimate AI career agent. We transform scattered digital footprints into your most powerful professional weapon, landing you the interviews you deserve.</p>
-        <a href="#cta" class="cta-btn">Get Started for Free</a>
+        <p>OmniResume is an AI-driven career identity integration platform. We transform scattered digital footprints into a job seeker's most powerful professional weapon, and provide enterprises with the most precise talent insights.</p>
     </div>
 
-    <section id="features">
-        <h2 class="section-title">Why Use <span>OmniResume</span>?</h2>
+    <section id="problem">
+        <h2 class="section-title">The <span>Problem</span></h2>
         <div class="grid-3">
             <div class="card">
                 <i class="fa-solid fa-server"></i>
-                <h3>Unify Your Experience</h3>
-                <p>Are your achievements scattered across LinkedIn, GitHub, and campus systems? Our platform automatically aggregates your data securely, building a centralized, easy-to-manage personal career Data Lake.</p>
+                <h3>Highly Fragmented Data</h3>
+                <p>Job seekers' achievements are scattered across LinkedIn, GitHub, various job boards, and personal cloud storage. For students, crucial records are locked within closed campus systems (like EECLASS, Moodle), making it difficult to effectively extract and inventory them.</p>
             </div>
             <div class="card">
                 <i class="fa-solid fa-hourglass-half"></i>
-                <h3>Stop Manual Formatting</h3>
-                <p>Stop spending hours rewriting your resume for every application. Let our AI tailor your experience to match specific Job Descriptions (JD) instantly, ensuring you pass the ATS (Applicant Tracking System).</p>
+                <h3>High Customization Costs</h3>
+                <p>When facing different job openings, candidates spend a significant amount of time manually restructuring their resumes to match the Job Description (JD). This results in many excellent talents being eliminated in the resume screening stage simply because they don't know how to "package" themselves.</p>
             </div>
             <div class="card">
-                <i class="fa-solid fa-bolt"></i>
-                <h3>Stand Out to Employers</h3>
-                <p>We generate structured, professional resumes that highlight your true value. For enterprise HRs, we provide data-driven talent insight reports, ensuring your skills are perfectly understood.</p>
+                <i class="fa-solid fa-eye-slash"></i>
+                <h3>Enterprise Evaluation Blind Spots</h3>
+                <p>The resumes received by employers are often superficial and inconsistently formatted, making it difficult to quickly and structurally understand a candidate's true value and potential, leading to low recruitment efficiency and missed talent.</p>
             </div>
         </div>
     </section>
 
     <section id="solution" style="background-color: var(--white); border-radius: 40px; box-shadow: 0 4px 30px rgba(0,0,0,0.02);">
-        <h2 class="section-title">How It <span>Works</span></h2>
+        <h2 class="section-title">The <span>Solution</span></h2>
         <div class="grid-2" style="align-items: center;">
             <div>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--secondary);">We completely disrupt the traditional, painful manual resume-building process with three core technologies:</p>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--secondary);">OmniResume completely disrupts the traditional manual resume-filling model, creating a seamless experience through three core technologies:</p>
                 <ul class="feature-list">
-                    <li><strong>One-Click Auto-Aggregation:</strong> Connect academic systems (EECLASS, Moodle) and professional platforms with our secure API to sync your latest achievements.</li>
-                    <li><strong>AI Dynamic Generation:</strong> Paste a target job link, and our LLM will analyze the required skills and automatically select the most relevant experiences from your data to generate a highly-targeted resume.</li>
-                    <li><strong>Smart Interview Prep:</strong> Generate potential interview questions based on the intersection of your tailored resume and the target company's job description.</li>
+                    <li><strong>One-Click Cross-Domain Aggregation (Auto-Aggregation):</strong> Through secure authorized APIs and an exclusive web crawler engine, it perfectly integrates campus systems with external professional platforms to automatically build a personal career Data Lake.</li>
+                    <li><strong>AI Intelligent Extraction and Dynamic Generation:</strong> Introduces LLMs to analyze keywords and skill requirements of target jobs, automatically selecting the most persuasive experiences from the user's database to generate a high-conversion, customized resume with one click.</li>
+                    <li><strong>Enterprise-Grade Talent Insight Reports:</strong> Provides recruiters with standardized, quantifiable candidate capability radar charts and fit analyses, transforming subjective text into objective data-driven decision support.</li>
                 </ul>
             </div>
             <div style="background: #f1f5f9; padding: 3rem; border-radius: 20px; text-align: center;">
-                <i class="fa-solid fa-rocket" style="font-size: 5rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                <i class="fa-solid fa-bolt" style="font-size: 5rem; color: var(--primary); margin-bottom: 1rem;"></i>
                 <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">From Hours to Seconds</h3>
-                <p>We are not providing just another "resume editor." We are your personal, automated career agent.</p>
+                <p>We are not providing just another "resume editor," but building an automated "career agent."</p>
             </div>
         </div>
     </section>
 
-    <section id="pricing">
-        <h2 class="section-title">Simple, Transparent <span>Pricing</span></h2>
-        <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem; color: var(--secondary);">Choose the plan that fits your career stage.</p>
+    <section id="market">
+        <h2 class="section-title">Market <span>&</span> Traction</h2>
         <div class="grid-2">
-            <div class="card" style="border-top: 5px solid var(--primary);">
-                <h3 style="font-size: 1.8rem;">For Job Seekers</h3>
-                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Perfect for students and professionals looking to land their dream job.</p>
-                <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; color: var(--text-dark);">
-                    Free <span style="font-size: 1rem; font-weight: 400; color: var(--text-muted);">/ Basic Data Aggregation</span>
+            <div class="card">
+                <h3 style="border-bottom: 2px solid var(--primary); padding-bottom: 10px; display: inline-block;">Massive Underserved Market</h3>
+                <div style="margin-top: 2rem;">
+                    <div class="metric">$400B+</div>
+                    <div class="metric-label">TAM: Global HR Tech & Recruitment Tech Market</div>
+                    <p style="margin: 1rem 0 2rem; font-size: 0.9rem; color: var(--text-muted);">Global enterprises are actively seeking AI solutions to optimize their recruitment funnels.</p>
+                    
+                    <div class="metric">$5B+</div>
+                    <div class="metric-label">SAM: APAC Higher Ed Graduates & Junior-to-Mid Talent</div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">Tens of millions of fresh graduates face a data gap transitioning from campus to the workplace every year. This is our perfect niche market.</p>
                 </div>
-                <ul class="feature-list" style="margin-bottom: 2rem;">
-                    <li>Lifetime free basic data sync</li>
-                    <li>Standard resume templates</li>
-                </ul>
-                <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; color: var(--primary);">
-                    $9.9 <span style="font-size: 1rem; font-weight: 400; color: var(--text-muted);">/ month (Pro Plan)</span>
-                </div>
-                <ul class="feature-list">
-                    <li>Unlimited AI resume customization</li>
-                    <li>Deep interview question prediction</li>
-                    <li>Career trajectory analysis</li>
-                </ul>
             </div>
-            
-            <div class="card" style="border-top: 5px solid var(--secondary);">
-                <h3 style="font-size: 1.8rem;">For Enterprises</h3>
-                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">For HR teams seeking precision hiring and hidden talent discovery.</p>
-                <div style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; color: var(--text-dark);">
-                    $499 <span style="font-size: 1rem; font-weight: 400; color: var(--text-muted);">/ month</span>
-                </div>
-                <ul class="feature-list">
-                    <li>Advanced talent search & analysis system</li>
-                    <li>Standardized candidate capability radar charts</li>
-                    <li>Objective data-driven decision support</li>
-                    <li>Automated high-potential talent matching</li>
+            <div class="card">
+                <h3 style="border-bottom: 2px solid var(--primary); padding-bottom: 10px; display: inline-block;">Strong Go-To-Market (GTM) Strategy</h3>
+                <ul class="feature-list" style="margin-top: 2rem;">
+                    <li><strong>B2B2C Campus Penetration:</strong> Prioritizes partnerships with career development centers at top universities (such as NTHU) to achieve extremely low Customer Acquisition Costs (CAC) through campus workshops and authorized collaborations.</li>
+                    <li><strong>Viral Loop:</strong> When users generate exquisite resumes and portfolios and share them on social media, each resume carries our exclusive watermark and link, driving organic traffic.</li>
+                    <li><strong>Core Metric Projections:</strong> Expected to reach 10,000 active users in the first quarter post-launch, targeting a first-year user Retention Rate of over 60%.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section id="about">
-        <h2 class="section-title">Built by <span>Experts</span></h2>
-        <div class="grid-2" style="align-items: center;">
+    <section id="business" style="background-color: var(--white); border-radius: 40px; box-shadow: 0 4px 30px rgba(0,0,0,0.02);">
+        <h2 class="section-title">Business <span>Model</span></h2>
+        <div class="grid-2">
             <div>
-                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">OmniResume is designed to bridge the gap between academic closed systems and the modern professional world.</p>
-                <ul class="feature-list">
-                    <li><strong>Deep Technical & Financial Background:</strong> Our team brings together expertise in Artificial Intelligence, Data Science, and Quantitative Finance. We know how to process large-scale data and optimize complex machine learning models.</li>
-                    <li><strong>Real-World Industry Experience:</strong> Built by professionals who have driven AI digital transformation and worked in the quantitative trading departments of top financial institutions. We demand efficiency, accuracy, and results—and we built OmniResume to deliver exactly that.</li>
-                </ul>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">We have built a dual-sided marketplace SaaS model with high gross margins and high scalability:</p>
+                <div class="card" style="margin-bottom: 1.5rem; border-left: 4px solid var(--primary);">
+                    <h3>B2C: Job Seeker (Freemium Subscription)</h3>
+                    <p>Basic data aggregation features are permanently free. For high-frequency job seekers, we offer a <strong>$9.9/month Pro Plan</strong>, unlocking unlimited AI resume customization, deep interview question prediction, and career trajectory analysis.</p>
+                </div>
+                <div class="card" style="border-left: 4px solid var(--secondary);">
+                    <h3>B2B: Enterprise (SaaS + Matchmaking Fee)</h3>
+                    <p>We provide corporate HR with a <strong>$499/month talent search and analysis system</strong>. The system can automatically match hidden high-potential talents on the platform, charging a single headhunting matchmaking fee upon successful hiring, creating a highly profitable second growth curve.</p>
+                </div>
             </div>
-            <div class="card" style="background: var(--primary); color: white; border: none;">
-                <h3 style="color: white; margin-bottom: 1rem;">Our Mission</h3>
-                <p style="font-size: 1.1rem;">To ensure that no brilliant talent is overlooked simply because they lack the tools to properly package and present their scattered experiences.</p>
+            <div>
+                <h3 style="margin-bottom: 1.5rem;">Financial Projections (3-Year Forecast)</h3>
+                <ul class="feature-list">
+                    <li><strong>Year 1 (Penetration Phase):</strong> Focus on product iteration and campus expansion, aiming for 50,000 registered users to reach $200K ARR (Annual Recurring Revenue).</li>
+                    <li><strong>Year 2 (Monetization Phase):</strong> Fully launch B2B enterprise sales to trigger dual-sided network effects, with ARR projected to exceed $1.5M.</li>
+                    <li><strong>Year 3 (Expansion Phase):</strong> Achieve stable profitability and positive cash flow, start expanding into other major APAC markets, aiming for $5M+ ARR, and prepare to launch Series A fundraising.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="cta" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; border-radius: 40px; text-align: center;">
-        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Ready to Supercharge Your Career?</h2>
-        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 3rem;">Join our early access program to be among the first to experience the future of AI-driven recruitment and career building.</p>
+    <section id="team">
+        <h2 class="section-title">Team <span>&</span> Edge</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>Core Team</h3>
+                <p style="margin-bottom: 1.5rem;">We possess top-tier engineering and data capabilities to transform technology into commercial value:</p>
+                <ul class="feature-list">
+                    <li><strong>Deep Technical Background:</strong> The founding team has a profound background in Artificial Intelligence, Data Science, and Financial Engineering, specializing in large-scale data processing and machine learning model optimization.</li>
+                    <li><strong>Industry Practical Experience:</strong> Team members have held key R&D roles in top AI companies (leading AI digital transformation initiatives) and the quantitative departments of large financial institutions, possessing extremely strong capabilities in system development and complex problem-solving.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Unfair Advantage (Competitive Moat)</h3>
+                <p style="margin-bottom: 1.5rem;">Compared to competitors like LinkedIn, CakeResume, and traditional job boards:</p>
+                <ul class="feature-list">
+                    <li><strong>Bridging Closed Systems:</strong> Traditional platforms cannot reach data within closed campus systems. We are the only platform that can seamlessly aggregate academic system records and open-source community experiences.</li>
+                    <li><strong>From "Recording" to "Generating":</strong> Competitors stop at "providing blank templates for users to fill in," while we directly provide "the perfect answer automatically generated for the target job."</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="funding" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; border-radius: 40px; text-align: center;">
+        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Funding Status & Next Steps</h2>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 3rem;">We are seeking <strong>Pre-Seed round funding</strong>, expected to provide an 18-month Runway. This funding will be fully dedicated to building the underlying data crawler engine, fine-tuning AI models, and launching the first wave of our campus GTM strategy.</p>
         
-        <div style="background: rgba(255,255,255,0.1); padding: 2.5rem; border-radius: 20px; display: inline-block; text-align: center; backdrop-filter: blur(5px);">
-            <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem;">Get in Touch</h3>
-            <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 0.5rem;"><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i> dairyan930128@gapp.nthu.edu.tw</p>
-            <p style="font-weight: bold; font-size: 1.2rem;"><i class="fa-solid fa-globe" style="margin-right: 10px;"></i> https://dairyan930128gapp.github.io</p>
+        <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 20px; display: inline-block; text-align: left; backdrop-filter: blur(5px);">
+            <h3 style="margin-bottom: 1rem;"><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i>Let's Talk</h3>
+            <p style="margin-bottom: 0.5rem;">Join us in reshaping the future recruitment market!</p>
+            <p style="font-weight: bold; font-size: 1.1rem;">dairyan930128@gapp.nthu.edu.tw</p>
+            <p style="font-weight: bold; font-size: 1.1rem;">https://dairyan930128gapp.github.io</p>
         </div>
     </section>
 
