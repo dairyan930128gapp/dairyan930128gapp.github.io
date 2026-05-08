@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OmniResume | AI 驅動的職涯身份整合平台</title>
-    <!-- 引入 FontAwesome 圖示庫 -->
+    <title>OmniResume | AI-Driven Career Identity Integration Platform</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -31,7 +30,7 @@
             line-height: 1.7;
         }
 
-        /* 導覽列 */
+        /* Navigation Bar */
         header {
             position: fixed;
             top: 0;
@@ -72,7 +71,7 @@
             color: var(--primary);
         }
 
-        /* 區塊共用設定 */
+        /* Section Global Settings */
         section {
             padding: 5rem 2rem;
             max-width: 1100px;
@@ -91,7 +90,7 @@
             color: var(--primary);
         }
 
-        /* Hero 封面區塊 */
+        /* Hero Cover Section */
         .hero {
             margin-top: 4rem;
             padding: 8rem 2rem;
@@ -120,7 +119,7 @@
             font-weight: 300;
         }
 
-        /* 網格與卡片設計 */
+        /* Grid and Card Design */
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -159,7 +158,7 @@
             color: var(--text-dark);
         }
 
-        /* 列表樣式 */
+        /* List Styles */
         .feature-list {
             list-style: none;
         }
@@ -178,7 +177,7 @@
             font-weight: bold;
         }
 
-        /* 數據與標籤 */
+        /* Metrics and Labels */
         .metric {
             font-size: 3rem;
             font-weight: 900;
@@ -202,7 +201,7 @@
             margin-top: 4rem;
         }
 
-        /* 響應式設定 */
+        /* Responsive Settings */
         @media (max-width: 768px) {
             .grid-2, .grid-3 { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2.5rem; }
@@ -217,145 +216,138 @@
         <nav>
             <a href="#" class="logo">OmniResume.</a>
             <div class="nav-links">
-                <a href="#problem">痛點與解法</a>
-                <a href="#business">商業與市場</a>
-                <a href="#team">團隊與募資</a>
+                <a href="#problem">Problem & Solution</a>
+                <a href="#business">Business & Market</a>
+                <a href="#team">Team & Funding</a>
             </div>
         </nav>
     </header>
 
-    <!-- 1. Cover -->
     <div class="hero" id="cover">
         <h1>Redefine Your Career Identity</h1>
-        <p>OmniResume 是一個 AI 驅動的職涯身份整合平台。我們將散落的數位足跡，轉化為求職者最具殺傷力的職場武器，並為企業提供最精準的人才洞察。<!--[cite: 1] --></p>
+        <p>OmniResume is an AI-driven career identity integration platform. We transform scattered digital footprints into a job seeker's most powerful professional weapon, and provide enterprises with the most precise talent insights.</p>
     </div>
 
-    <!-- 2. Problem -->
     <section id="problem">
         <h2 class="section-title">The <span>Problem</span></h2>
         <div class="grid-3">
             <div class="card">
                 <i class="fa-solid fa-server"></i>
-                <h3>資料高度碎片化</h3>
-                <p>求職者的成就散落於 LinkedIn、GitHub、各大人力銀行以及個人雲端中<!--[cite: 1] -->。學生族群的關鍵記錄更被深鎖在各大校園封閉系統（如 EECLASS, Moodle）內，導致難以有效提取與盤點。</p>
+                <h3>Highly Fragmented Data</h3>
+                <p>Job seekers' achievements are scattered across LinkedIn, GitHub, various job boards, and personal cloud storage. For students, crucial records are locked within closed campus systems (like EECLASS, Moodle), making it difficult to effectively extract and inventory them.</p>
             </div>
             <div class="card">
                 <i class="fa-solid fa-hourglass-half"></i>
-                <h3>客製化成本極高</h3>
-                <p>面對不同職缺，求職者需要耗費大量時間手動重組履歷以符合 JD（職位描述）<!--[cite: 1] -->。這導致許多優秀人才因為「不會包裝」，而在履歷篩選階段遭到淘汰。</p>
+                <h3>High Customization Costs</h3>
+                <p>When facing different job openings, candidates spend a significant amount of time manually restructuring their resumes to match the Job Description (JD). This results in many excellent talents being eliminated in the resume screening stage simply because they don't know how to "package" themselves.</p>
             </div>
             <div class="card">
                 <i class="fa-solid fa-eye-slash"></i>
-                <h3>企業端評估盲區</h3>
-                <p>資方收到的履歷往往流於形式且格式不一，難以快速、結構化地了解求職者的真實價值與潛力，造成招募效率低落與錯失良才<!--[cite: 1] -->。</p>
+                <h3>Enterprise Evaluation Blind Spots</h3>
+                <p>The resumes received by employers are often superficial and inconsistently formatted, making it difficult to quickly and structurally understand a candidate's true value and potential, leading to low recruitment efficiency and missed talent.</p>
             </div>
         </div>
     </section>
 
-    <!-- 3. Solution -->
     <section id="solution" style="background-color: var(--white); border-radius: 40px; box-shadow: 0 4px 30px rgba(0,0,0,0.02);">
         <h2 class="section-title">The <span>Solution</span></h2>
         <div class="grid-2" style="align-items: center;">
             <div>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--secondary);">OmniResume 徹底顛覆傳統手動填寫履歷的模式，透過三大核心技術打造無縫體驗：<!--[cite: 1] --></p>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--secondary);">OmniResume completely disrupts the traditional manual resume-filling model, creating a seamless experience through three core technologies:</p>
                 <ul class="feature-list">
-                    <li><strong>一鍵跨域聚合 (Auto-Aggregation)：</strong> 透過安全的授權 API 與獨家爬蟲引擎，完美串接校園系統與外部專業平台，自動建立個人職涯資料湖 (Data Lake)<!--[cite: 1] -->。</li>
-                    <li><strong>AI 智能萃取與動態生成：</strong> 導入 LLM (大型語言模型) 分析目標職缺的關鍵字與職能需求，從用戶的資料庫中自動挑選最具說服力的經歷，一鍵生成高轉換率的客製化履歷<!--[cite: 1] -->。</li>
-                    <li><strong>企業級人才洞察報告：</strong> 為招募方提供標準化、可量化的候選人能力雷達圖與契合度分析，將主觀的文字轉化為客觀的數據決策支援<!--[cite: 1] -->。</li>
+                    <li><strong>One-Click Cross-Domain Aggregation (Auto-Aggregation):</strong> Through secure authorized APIs and an exclusive web crawler engine, it perfectly integrates campus systems with external professional platforms to automatically build a personal career Data Lake.</li>
+                    <li><strong>AI Intelligent Extraction and Dynamic Generation:</strong> Introduces LLMs to analyze keywords and skill requirements of target jobs, automatically selecting the most persuasive experiences from the user's database to generate a high-conversion, customized resume with one click.</li>
+                    <li><strong>Enterprise-Grade Talent Insight Reports:</strong> Provides recruiters with standardized, quantifiable candidate capability radar charts and fit analyses, transforming subjective text into objective data-driven decision support.</li>
                 </ul>
             </div>
             <div style="background: #f1f5f9; padding: 3rem; border-radius: 20px; text-align: center;">
                 <i class="fa-solid fa-bolt" style="font-size: 5rem; color: var(--primary); margin-bottom: 1rem;"></i>
-                <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">從數小時縮短至數秒鐘</h3>
-                <p>我們不是提供另一個「履歷編輯器」，而是打造一個自動化的「職涯經紀人」。</p>
+                <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">From Hours to Seconds</h3>
+                <p>We are not providing just another "resume editor," but building an automated "career agent."</p>
             </div>
         </div>
     </section>
 
-    <!-- 4. Traction & 6. Market Opportunity -->
     <section id="market">
         <h2 class="section-title">Market <span>&</span> Traction</h2>
         <div class="grid-2">
             <div class="card">
-                <h3 style="border-bottom: 2px solid var(--primary); padding-bottom: 10px; display: inline-block;">巨大且未被滿足的市場</h3>
+                <h3 style="border-bottom: 2px solid var(--primary); padding-bottom: 10px; display: inline-block;">Massive Underserved Market</h3>
                 <div style="margin-top: 2rem;">
                     <div class="metric">$400B+</div>
-                    <div class="metric-label">TAM: 全球 HR Tech 與招募科技市場<!--[cite: 2] --></div>
-                    <p style="margin: 1rem 0 2rem; font-size: 0.9rem; color: var(--text-muted);">全球企業正積極尋求 AI 解決方案以優化招募漏斗。</p>
+                    <div class="metric-label">TAM: Global HR Tech & Recruitment Tech Market</div>
+                    <p style="margin: 1rem 0 2rem; font-size: 0.9rem; color: var(--text-muted);">Global enterprises are actively seeking AI solutions to optimize their recruitment funnels.</p>
                     
                     <div class="metric">$5B+</div>
-                    <div class="metric-label">SAM: 亞太區高教畢業生與初中階人才市場<!--[cite: 2] --></div>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">每年數千萬新鮮人面臨從校園到職場的資料斷層，這是我們切入的完美利基市場。</p>
+                    <div class="metric-label">SAM: APAC Higher Ed Graduates & Junior-to-Mid Talent</div>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">Tens of millions of fresh graduates face a data gap transitioning from campus to the workplace every year. This is our perfect niche market.</p>
                 </div>
             </div>
             <div class="card">
-                <h3 style="border-bottom: 2px solid var(--primary); padding-bottom: 10px; display: inline-block;">強勢的成長策略 (GTM)</h3>
+                <h3 style="border-bottom: 2px solid var(--primary); padding-bottom: 10px; display: inline-block;">Strong Go-To-Market (GTM) Strategy</h3>
                 <ul class="feature-list" style="margin-top: 2rem;">
-                    <li><strong>B2B2C 校園滲透：</strong> 優先與頂尖大學（如 NTHU 等）的職涯發展中心合作，透過校園工作坊與授權合作，達成極低的獲客成本 (CAC)<!--[cite: 2] -->。</li>
-                    <li><strong>病毒式擴散 (Viral Loop)：</strong> 當使用者產出精美的履歷與作品集並分享至社群時，每一份履歷都帶有我們的專屬浮水印與連結，帶來自然流量<!--[cite: 2] -->。</li>
-                    <li><strong>核心指標預估：</strong> 預計上線首季達成 10,000 名活躍用戶，首年用戶留存率 (Retention Rate) 瞄準 60% 以上<!--[cite: 2] -->。</li>
+                    <li><strong>B2B2C Campus Penetration:</strong> Prioritizes partnerships with career development centers at top universities (such as NTHU) to achieve extremely low Customer Acquisition Costs (CAC) through campus workshops and authorized collaborations.</li>
+                    <li><strong>Viral Loop:</strong> When users generate exquisite resumes and portfolios and share them on social media, each resume carries our exclusive watermark and link, driving organic traffic.</li>
+                    <li><strong>Core Metric Projections:</strong> Expected to reach 10,000 active users in the first quarter post-launch, targeting a first-year user Retention Rate of over 60%.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- 5. Business Model & 7. Financials -->
     <section id="business" style="background-color: var(--white); border-radius: 40px; box-shadow: 0 4px 30px rgba(0,0,0,0.02);">
         <h2 class="section-title">Business <span>Model</span></h2>
         <div class="grid-2">
             <div>
-                <p style="font-size: 1.1rem; margin-bottom: 2rem;">我們建構了具備高毛利與高度擴展性的雙邊市場 SaaS 模式：<!--[cite: 1, 2] --></p>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem;">We have built a dual-sided marketplace SaaS model with high gross margins and high scalability:</p>
                 <div class="card" style="margin-bottom: 1.5rem; border-left: 4px solid var(--primary);">
-                    <h3>B2C：求職者端 (Freemium 訂閱制)</h3>
-                    <p>基礎資料聚合功能永久免費。針對高頻求職者提供 <strong>$9.9/月 的 Pro 方案</strong>，解鎖無上限的 AI 履歷客製化、深度面試題庫預測與職涯軌跡分析<!--[cite: 2] -->。</p>
+                    <h3>B2C: Job Seeker (Freemium Subscription)</h3>
+                    <p>Basic data aggregation features are permanently free. For high-frequency job seekers, we offer a <strong>$9.9/month Pro Plan</strong>, unlocking unlimited AI resume customization, deep interview question prediction, and career trajectory analysis.</p>
                 </div>
                 <div class="card" style="border-left: 4px solid var(--secondary);">
-                    <h3>B2B：企業端 (SaaS + 媒合費)</h3>
-                    <p>為企業 HR 提供 <strong>$499/月 的人才搜尋與解析系統</strong>。系統能自動配對平台上被隱藏的高潛力人才，成功錄取後收取單筆獵頭媒合費，打造高利潤的第二成長曲線<!--[cite: 2] -->。</p>
+                    <h3>B2B: Enterprise (SaaS + Matchmaking Fee)</h3>
+                    <p>We provide corporate HR with a <strong>$499/month talent search and analysis system</strong>. The system can automatically match hidden high-potential talents on the platform, charging a single headhunting matchmaking fee upon successful hiring, creating a highly profitable second growth curve.</p>
                 </div>
             </div>
             <div>
-                <h3 style="margin-bottom: 1.5rem;">Financial Projections (三年預測)</h3>
+                <h3 style="margin-bottom: 1.5rem;">Financial Projections (3-Year Forecast)</h3>
                 <ul class="feature-list">
-                    <li><strong>Year 1 (滲透期)：</strong> 專注產品迭代與校園擴張，目標 5 萬註冊用戶，達成 $200K ARR (年度經常性收入)<!--[cite: 2] -->。</li>
-                    <li><strong>Year 2 (變現期)：</strong> 全面啟動 B2B 企業端銷售，開啟雙邊網路效應，預計 ARR 突破 $1.5M<!--[cite: 2] -->。</li>
-                    <li><strong>Year 3 (擴張期)：</strong> 達成穩定獲利與正向現金流，開始進軍亞太區其他主要市場，ARR 瞄準 $5M 以上，準備啟動 Series A 募資<!--[cite: 2] -->。</li>
+                    <li><strong>Year 1 (Penetration Phase):</strong> Focus on product iteration and campus expansion, aiming for 50,000 registered users to reach $200K ARR (Annual Recurring Revenue).</li>
+                    <li><strong>Year 2 (Monetization Phase):</strong> Fully launch B2B enterprise sales to trigger dual-sided network effects, with ARR projected to exceed $1.5M.</li>
+                    <li><strong>Year 3 (Expansion Phase):</strong> Achieve stable profitability and positive cash flow, start expanding into other major APAC markets, aiming for $5M+ ARR, and prepare to launch Series A fundraising.</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- 8. Team & 9. Competition -->
     <section id="team">
         <h2 class="section-title">Team <span>&</span> Edge</h2>
         <div class="grid-2">
             <div class="card">
                 <h3>Core Team</h3>
-                <p style="margin-bottom: 1.5rem;">我們擁有將技術轉化為商業價值的頂尖工程與數據實力：<!--[cite: 1, 2] --></p>
+                <p style="margin-bottom: 1.5rem;">We possess top-tier engineering and data capabilities to transform technology into commercial value:</p>
                 <ul class="feature-list">
-                    <li><strong>技術背景底蘊：</strong> 創始團隊具備深厚的人工智慧、資料科學與財務工程背景，專精於大規模數據處理與機器學習模型優化<!--[cite: 2] -->。</li>
-                    <li><strong>業界實戰經驗：</strong> 團隊成員曾於頂尖 AI 企業（主導 AI 數位轉型計畫）與大型金融機構量化部門擔任研發要角，具備極強的系統開發與解決複雜問題的能力<!--[cite: 2] -->。</li>
+                    <li><strong>Deep Technical Background:</strong> The founding team has a profound background in Artificial Intelligence, Data Science, and Financial Engineering, specializing in large-scale data processing and machine learning model optimization.</li>
+                    <li><strong>Industry Practical Experience:</strong> Team members have held key R&D roles in top AI companies (leading AI digital transformation initiatives) and the quantitative departments of large financial institutions, possessing extremely strong capabilities in system development and complex problem-solving.</li>
                 </ul>
             </div>
             <div class="card">
-                <h3>Unfair Advantage (競爭護城河)</h3>
-                <p style="margin-bottom: 1.5rem;">相比於 LinkedIn、CakeResume 及傳統人力銀行等競爭對手<!--[cite: 1, 2] -->：</p>
+                <h3>Unfair Advantage (Competitive Moat)</h3>
+                <p style="margin-bottom: 1.5rem;">Compared to competitors like LinkedIn, CakeResume, and traditional job boards:</p>
                 <ul class="feature-list">
-                    <li><strong>跨越封閉系統壁壘：</strong> 傳統平台無法觸及校園封閉系統內的資料。我們是唯一能無縫聚合學術系統與開源社群經歷的平台。</li>
-                    <li><strong>從「記錄」到「生成」：</strong> 對手停留在「提供空白版型讓人填寫」，我們直接提供「針對目標職缺自動生成的完美解答」。</li>
+                    <li><strong>Bridging Closed Systems:</strong> Traditional platforms cannot reach data within closed campus systems. We are the only platform that can seamlessly aggregate academic system records and open-source community experiences.</li>
+                    <li><strong>From "Recording" to "Generating":</strong> Competitors stop at "providing blank templates for users to fill in," while we directly provide "the perfect answer automatically generated for the target job."</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- 10. Funding & 11. Summary -->
     <section id="funding" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; border-radius: 40px; text-align: center;">
         <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Funding Status & Next Steps</h2>
-        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 3rem;">我們正在尋求 <strong>Pre-Seed 輪資金</strong>，預計提供 18 個月的 Runway。這筆資金將全力投入於底層資料爬蟲引擎的建置、AI 模型的微調，以及啟動首波校園 GTM 策略。<!--[cite: 1, 2] --></p>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 3rem;">We are seeking <strong>Pre-Seed round funding</strong>, expected to provide an 18-month Runway. This funding will be fully dedicated to building the underlying data crawler engine, fine-tuning AI models, and launching the first wave of our campus GTM strategy.</p>
         
         <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 20px; display: inline-block; text-align: left; backdrop-filter: blur(5px);">
             <h3 style="margin-bottom: 1rem;"><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i>Let's Talk</h3>
-            <p style="margin-bottom: 0.5rem;">與我們一起重塑未來的招募市場！<!--[cite: 1] --></p>
+            <p style="margin-bottom: 0.5rem;">Join us in reshaping the future recruitment market!</p>
             <p style="font-weight: bold; font-size: 1.1rem;">founder@omniresume.tech</p>
             <p style="font-weight: bold; font-size: 1.1rem;">https://dairyan930128gapp.github.io</p>
         </div>
